@@ -1,0 +1,19 @@
+{
+  "name": "spotify-ripper-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "directory-tree": "^2.2.1",
+    "dockerode": "^2.5.8",
+    "express": "^4.16.4",
+    "rimraf": "^2.6.3",
+    "stream": "0.0.2",
+    "ws": "^6.1.3"
+  }
+}

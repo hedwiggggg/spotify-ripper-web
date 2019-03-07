@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  spotify-ripper-web:
+    build: ./
+
+    restart: unless-stopped
+
+    ports:
+      - "80:3000"
+      - "81:3300"
+      
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./ripped_music:/ripped_music
+
+    environment:
+      APP_PATH: ${APP_PATH}
