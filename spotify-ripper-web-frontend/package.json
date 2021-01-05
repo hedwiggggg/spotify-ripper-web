@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "anser": "^1.4.8",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "file-saver": "^2.0.0",
     "jszip": "^3.1.5",
     "string_decoder": "^1.2.0",
