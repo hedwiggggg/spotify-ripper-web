@@ -102,7 +102,7 @@ module.exports = {
     console.log("Trying to download..", "User", packet.data.user);
 
     const folderName = (new Date().getTime()).toString(36);
-    const folderPath = `${process.env.APP_PATH}/ripped_music/${ folderName }`;
+    const folderPath = `${process.env.EXPORT_PATH}/${ folderName }`;
 
     const containerOptions = {
       ...baseContainerOptions,

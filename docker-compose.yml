@@ -9,10 +9,10 @@ services:
     ports:
       - "80:3000"
       - "81:3300"
-      
+
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./ripped_music:/ripped_music
+      - ${EXPORT_PATH}:/ripped_music
 
     environment:
-      APP_PATH: ${APP_PATH}
+      EXPORT_PATH: ${EXPORT_PATH}
