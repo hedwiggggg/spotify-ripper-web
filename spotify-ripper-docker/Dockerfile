@@ -6,14 +6,14 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Install packages
 RUN apt-get update -qy && apt-get upgrade -qy
-RUN apt-get install nano wget lame build-essential libffi-dev python-pip python-dev python3-dev python3-pip libffi-dev -y
+RUN apt-get install nano wget lame build-essential libffi-dev python-pip python-dev python3-dev python3-pip libffi-dev python3-cffi -y
 
 WORKDIR /dependencies
 
 # Download libspotify & compile it
 COPY ./dependencies/libspotify-12.1.51-Linux-x86_64-release.tar.gz ./libspotify-12.1.51-Linux-x86_64-release.tar.gz
 RUN tar xvf libspotify-12.1.51-Linux-x86_64-release.tar.gz && \
-  rm -f libspotify-12.1.51-Linux-x86_64-release.tar.gz && \
+	rm -f libspotify-12.1.51-Linux-x86_64-release.tar.gz && \
 	cd libspotify-12.1.51-Linux-x86_64-release && \
 	make install prefix=/usr/local
 
